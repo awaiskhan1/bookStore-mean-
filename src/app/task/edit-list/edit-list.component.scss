@@ -1,0 +1,76 @@
+@import '../../../constant.scss';
+
+:host {
+    ::ng-deep mat-form-field {
+        .mat-form-field-underline{
+            background: $accent !important;
+        }
+        .mat-form-field-label{
+            color : $accent;
+        }
+    }
+    
+    .listWrapper{
+        padding: 0px 20px;
+        width: 800px;
+        margin: 0px auto;
+        display: flex;
+        min-height: 400px;
+        box-sizing: border-box;
+        background: $backBg1;
+        border-radius: 5px;
+        border: 2px solid #464646;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        @extend effect;
+        &:hover {
+            border-color: $accent;
+            background: $accent;
+            button{
+                background: $darkAccent;
+            }
+            ::ng-deep mat-form-field {
+                .mat-form-field-underline{
+                    background: $darkAccent !important;
+                }
+                .mat-form-field-label{
+                    color : $darkAccent;
+                }
+            }
+        }
+        button {
+            @extend effect;
+        }
+        ::ng-deep mat-form-field {
+            width: 100%;
+            color: $fontcolor1 !important;
+            margin-bottom: 20px;
+            label, input span {
+                color: $fontcolor1 !important;
+                @extend effect;
+            }
+            .mat-form-field-underline{
+                background: $accent !important;
+            }
+            .mat-form-field-label{
+                color : $accent;
+            }
+        }
+        .example-container{
+            width: 100%;
+            margin-bottom: 20px;
+            ::ng-deep mat-form-field{
+                width: 100%;
+            }
+        }
+    }
+}
+:host {
+    ::ng-deep mat-paginator{ 
+        background: #1f1f1f;
+        *{
+            color: $fontcolor1 !important;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+$accent : #f16e9a;
+$darkAccent : #d63c71;
+$backBg1: #303030;
+$fontcolor1 : #f1f1f1;
+$primary : #3f51b5;
+
+body{
+    background: rgb(41, 41, 41);
+    color: #fff
+}
+
+effect{
+    transition:All 0.3s ease-in-out;
+    -webkit-transition:All 0.3s ease-in-out;
+    -moz-transition:All 0.3s ease-in-out;
+    -o-transition:All 0.3s ease-in-out;
+}

@@ -1,0 +1,43 @@
+<app-nav-bar></app-nav-bar>
+<section class="listWrapper">
+	<div class="heading">
+		<h2 class="title">Todo List!</h2>
+		<h4 class="subTitle">
+			lorem ispum set amet sit decoder
+		</h4>
+	</div>
+	<div class="example-container">
+		<mat-form-field>
+			<input matInput autocomplete="off"  [(ngModel)]='data.isbn' placeholder="Input" placeholder="ISBN">
+		</mat-form-field>
+
+		<mat-form-field>
+			<input matInput autocomplete="off" [(ngModel)]='data.title' placeholder="Input" placeholder="Title">
+		</mat-form-field>
+
+		<mat-form-field>
+			<input matInput autocomplete="off" [(ngModel)]='data.author' placeholder="Input" placeholder="Author">
+		</mat-form-field>
+
+		<mat-form-field>
+			<textarea matInput autocomplete="off" [(ngModel)]='data.pages' placeholder="Description"></textarea>
+		</mat-form-field>
+		
+		<mat-form-field>
+			<input matInput autocomplete="off" [(ngModel)]='data.publisher' placeholder="Input" placeholder="Publisher">
+		</mat-form-field>
+
+		<mat-form-field>
+			<input matInput autocomplete="off" [(ngModel)]='data.published_year' placeholder="Input" placeholder="Publisher Year">
+		</mat-form-field>
+
+
+		<mat-form-field>
+			<input matInput [matDatepicker]="picker" placeholder="Choose a date" (dateInput)="addEvent('input', $event)" (dateChange)="addEvent('change', $event)">
+			<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+			<mat-datepicker #picker></mat-datepicker>
+		</mat-form-field>
+
+		<button mat-flat-button color="primary" (click)="submitMethod()">{{btnName}}</button>
+	</div>
+</section>

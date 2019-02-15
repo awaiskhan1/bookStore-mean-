@@ -1,0 +1,72 @@
+@import '../../../constant.scss';
+
+:host {
+    ::ng-deep mat-form-field {
+        .mat-form-field-underline{
+            background: $accent !important;
+        }
+        .mat-form-field-label{
+            color : $accent;
+        }
+    }
+    .listWrapper{
+        padding: 0px 20px;
+        display: flex;
+        flex-direction: column;
+        .width100{
+            width: 100%;
+        }
+        .heading{
+            text-align: center;
+            .title {
+                font-size: 50px;
+                margin-bottom: 10px;
+            }
+            .subTitle{
+                font-size: 16px;
+                margin-top: 5px;
+            }
+            margin-bottom: 30px;
+        }
+        .tableWrapper{
+            width: 100%;
+            table {
+                width: 100%;
+                background: #1f1f1f;
+                mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat-header-cell {
+                    border-bottom-color:rgba(255, 255, 255, 0.12) !important;
+                }
+                tr.mat-row{
+                    @extend effect;
+                    &:hover{
+                        background:  $accent !important;
+                        * {
+                            color: $fontcolor1 !important;
+                        }
+                    }
+                }
+            }
+            *{
+                color: $fontcolor1 !important;
+            }
+            
+        }
+        .fontIcons{
+            a {
+                text-decoration: none;
+                i {
+                    font-size: 18px;
+                    color: $fontcolor1;
+                }
+            }
+        }
+    }
+}
+:host {
+    ::ng-deep mat-paginator{ 
+        background: #1f1f1f;
+        *{
+            color: $fontcolor1 !important;
+        }
+    }
+}

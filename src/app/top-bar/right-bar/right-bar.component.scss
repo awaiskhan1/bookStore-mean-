@@ -1,0 +1,13 @@
+@import '../../../constant.scss';
+
+.login-section{
+    width: 100%;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 5px 15px;
+    a{
+        margin: 2px 8px; 
+        display: inline-block;
+        color: $fontcolor1 !important; 
+    }
+}

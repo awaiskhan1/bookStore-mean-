@@ -1,0 +1,65 @@
+@import '../../../constant.scss';
+
+effect{
+    transition:All 0.3s ease-in-out;
+    -webkit-transition:All 0.3s ease-in-out;
+    -moz-transition:All 0.3s ease-in-out;
+    -o-transition:All 0.3s ease-in-out;
+}
+:host {
+    .main-wrapper{
+        display: flex;
+        height: 90vh;
+        width: 100%;
+        justify-content: center;
+    }
+    .example-container{
+        width: 500px;
+        padding: 20px;
+        margin: auto;
+        display: flex;
+        min-height: 400px;
+        box-sizing: border-box;
+        background: $backBg1;
+        border-radius: 5px;
+        border: 2px solid #464646;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        @extend effect;
+        &:hover {
+            border-color: #f16e9a;
+            background: #f16e9a;
+            button{
+                background: $darkAccent;
+            }
+            .title{
+                color: $fontcolor1;
+            }
+        }
+        button {
+            @extend effect;
+        }
+        .title{
+            font-size: 24px;
+            text-align: center;
+            color: $darkAccent;
+            @extend effect;
+        }
+        .bottom-text{
+            margin-bottom: 28px;
+            a {
+                color: #fff;
+            }
+        }
+        ::ng-deep mat-form-field {
+            width: 100%;
+            color: $fontcolor1 !important;
+            margin-bottom: 20px;
+            label, input span {
+                color: $fontcolor1 !important;
+                @extend effect;
+            }
+        }
+    }
+}

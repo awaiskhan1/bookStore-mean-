@@ -1,0 +1,27 @@
+<section class="main-wrapper">
+    <div class="example-container">
+      <h2 class="title">Welcome Todo App</h2>
+      <mat-form-field>
+        <input autocomplete="off" [(ngModel)]="data.name" matInput placeholder="Name">
+      </mat-form-field>
+      <mat-form-field>
+        <input autocomplete="off" [(ngModel)]="data.username" matInput placeholder="username">
+      </mat-form-field>
+      <mat-form-field>
+        <input autocomplete="off" [(ngModel)]="data.email" matInput placeholder="Email">
+      </mat-form-field>
+      <mat-form-field>
+        <input autocomplete="off" [(ngModel)]="data.phone" matInput placeholder="Phone">
+      </mat-form-field>
+      <mat-form-field>
+        <input autocomplete="off" [(ngModel)]="data.password" matInput placeholder="Password">
+      </mat-form-field>
+      <mat-form-field>
+        <input autocomplete="off" [(ngModel)]="conformPass"matInput placeholder="Conform Password">
+      </mat-form-field>
+      <span class="bottom-text">Already a Member : <a routerLink="/login">login Here!</a></span>
+      <!-- routerLink="/todolist" -->
+      <button mat-flat-button color="primary"  (click)="submitMethod()">Register Here</button>
+    </div>
+  </section>
+  
